@@ -1,73 +1,88 @@
-Binance Market Data WebSocket Implementation using react
-# Getting Started with Create React App
+# Binance Market Data WebSocket - Candlestick Chart Visualization
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a real-time candlestick chart visualization for cryptocurrency data using React and WebSockets. The application connects to the Binance WebSocket API to retrieve live market data for selected cryptocurrency pairs and displays it using a candlestick chart. The chart updates smoothly without flickering, and users can switch between different cryptocurrencies and time intervals for candlestick data.
 
-In the project directory, you can run:
+### Features
 
-### `npm start`
+- Real-time candlestick chart using the Binance WebSocket API.
+- Support for multiple cryptocurrency pairs: `ETH/USDT`, `BNB/USDT`, `DOT/USDT`.
+- Toggle between 1-minute, 3-minute, and 5-minute intervals.
+- Dark grey and black theme for a premium look.
+- Smooth chart updates without flickering.
+- Data persistence when switching between cryptocurrencies.
+- Responsive design for optimal viewing on different devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: Front-end library for building the user interface.
+- **Binance WebSocket API**: For retrieving real-time market data.
+- **Chart.js**: For rendering the candlestick chart.
+- **chartjs-chart-financial**: Plugin for financial charts in Chart.js.
+- **Local Storage**: To store and persist candlestick data for each cryptocurrency pair.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+    ```bash
+    git clone https://github.com/yourusername/binance-market-data.git
+    cd binance-market-data
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install the dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    npm install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server:
 
-### `npm run eject`
+    ```bash
+    npm start
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Open the application in your browser:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```
+    http://localhost:3000
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+binance-market-data/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── CandlestickChart.js
+    |   ├── CandlestickChart.css # Candlestick chart implementation
+│   ├── App.js                    # Main app component
+│   ├── index.js                  # Entry point for the React app
+│   ├── App.css                   # Styles for the app
+├── package.json                  # Project dependencies and scripts
+├── README.md                     # Project documentation
 
-## Learn More
+Usage
+Select Cryptocurrency Pair: Use the dropdown to toggle between ETH/USDT, BNB/USDT, and DOT/USDT.
+Change Time Interval: Choose between 1-minute, 3-minute, or 5-minute intervals for the candlestick data.
+View Live Data: The candlestick chart updates in real-time, displaying the selected cryptocurrency's market data.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Deployment
+To create a production build for deployment:
+npm run build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Issues and Troubleshooting
+If you encounter issues such as WebSocket connection problems or chart rendering issues, please check the browser console for more details. Make sure that:
 
-### Code Splitting
+You have an active internet connection.
+The WebSocket URL is correct and functional.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> d086a98 (Initialize project using Create React App)
->>>>>>> 93fe537 (git push -u origin main)
+Acknowledgements
+React
+Binance WebSocket API
+Chart.js
+chartjs-chart-financial
