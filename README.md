@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-# Binance_Market-_data_WebSocket
 Binance Market Data WebSocket Implementation using react
-=======
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
